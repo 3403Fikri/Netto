@@ -1,0 +1,6 @@
+package com.example.netto
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
