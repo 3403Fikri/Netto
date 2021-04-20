@@ -6,7 +6,7 @@ class TwoCategoryBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       Stack(
         children: [
           Container(
