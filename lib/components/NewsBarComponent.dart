@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netto/constant.dart';
+import 'package:netto/models/NewsModels.dart';
 
 class NewsBar extends StatefulWidget {
   NewsBar({Key key}) : super(key: key);
@@ -9,6 +10,8 @@ class NewsBar extends StatefulWidget {
 }
 
 class _NewsBarState extends State<NewsBar> {
+  var selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -92,7 +95,29 @@ class _NewsBarState extends State<NewsBar> {
                       height: 100,
                       width: 2,
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 6.0, top: 6.0),
+                    child: Container(
+                      width: 200.0,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            neww[0].title,
+                            style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            'Aplikasi Nettonime versi 1.0.0 telah dirilis silahkapn update melalui playstore',
+                            style: TextStyle(fontSize: 10.0),
+                            textAlign: TextAlign.start,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -108,7 +133,7 @@ class _NewsBarState extends State<NewsBar> {
                   width: 5,
                   height: 5,
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.white.withOpacity(.5),
                       borderRadius: BorderRadius.all(Radius.circular(100))),
                 ),
                 SizedBox(
@@ -118,7 +143,7 @@ class _NewsBarState extends State<NewsBar> {
                   width: 5,
                   height: 5,
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.white.withOpacity(.5),
                       borderRadius: BorderRadius.all(Radius.circular(100))),
                 ),
                 SizedBox(
@@ -128,7 +153,7 @@ class _NewsBarState extends State<NewsBar> {
                   width: 5,
                   height: 5,
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.white.withOpacity(.5),
                       borderRadius: BorderRadius.all(Radius.circular(100))),
                 ),
               ],

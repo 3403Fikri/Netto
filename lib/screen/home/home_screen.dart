@@ -30,6 +30,9 @@ class _MyHomeState extends State<MyHome> {
                 child: TwoCategoryBar(),
               ),
               Padding(padding: EdgeInsets.only(top: 21), child: NewsBar()),
+              Padding(
+                padding: EdgeInsets.only(top: 21),
+              )
             ],
           )),
     );
